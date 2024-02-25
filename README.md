@@ -1,6 +1,6 @@
 # Freebie Website Scraper
 
-This project is a web scraping tool that monitors a freebie website Skeepers for new items and sends notifications to a Discord channel when new items become available or go out of stock. It is built using Node.js, Puppeteer, Axios, and Discord webhook.
+This is a web scraping tool that monitors a freebie website Skeepers for new items and sends notifications to a Discord channel when new items become available or go out of stock. It is built using Node.js, Puppeteer, Axios, and Discord webhook.
 
 ## Setup
 
