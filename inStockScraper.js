@@ -3,8 +3,6 @@ import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import axios from 'axios';
 import 'dotenv/config';
 
-dotenv.config();
-
 puppeteer.use(StealthPlugin());
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
