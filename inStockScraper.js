@@ -5,6 +5,9 @@ import 'dotenv/config';
 
 puppeteer.use(StealthPlugin());
 
+const LONG_DELAY = 15000;
+const SHORT_DELAY = 5000;
+
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const main = async () => {
@@ -34,16 +37,16 @@ const main = async () => {
 
     await page.type(passwordSelector, process.env.PASSWORD);
         
-    await delay(5000);
+    await delay(SHORT_DELAY);
 
     await page.click('button[type="submit"]');
-    await delay(5000);
+    await delay(SHORT_DELAY);
 
     const linkSelector ='a[href="/creators/campaigns/search"]';
     //await page.waitForSelector(linkSelector);
     
     await page.click(linkSelector);
-    await delay(10000);
+    await delay(SHORT_DELAY);
     const processedProducts = new Set();
 
     while (true) {
@@ -100,7 +103,7 @@ const main = async () => {
                     });
                 }
             }           
-            await delay(15000);
+            await delay(LONG_DELAY);
             await page.reload();
 
         } catch (error) {
